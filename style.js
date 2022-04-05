@@ -21,7 +21,7 @@ var checkTime = function () {
 
     //loop through timeColor classes
     for (var i = 0 ; i < timeBlockElements.length ; i++) {
-        // console.log(timeBlockElements)
+        console.log(timeBlockElements)
         //Get element i's ID as a string
         var elementID = timeBlockElements[i].id;
 
