@@ -19,28 +19,28 @@ var checkTime = function () {
     //get all elements with class "timeColor"
     var timeBlockElements = $(".timeColor");
 
-    //loop through taskarea classes
+    //loop through timeColor classes
     for (var i = 0 ; i < timeBlockElements.length ; i++) {
-
+        console.log(timeBlockElements)
         //Get element i's ID as a string
         var elementID = timeBlockElements[i].id;
 
         //get element by ID
-        var manipID = document.getElementById(timeBlockElements[i].id)
+        var dayColor = document.getElementById(timeBlockElements[i].id)
 
         //remove any old classes from element
         $(timeBlockElements[i].id).removeClass(".present .past .future");
-
+    
         // apply new class if task is present/past/future
         if (elementID < currentTime) {
-            $(manipID).addClass("past");
+            $(dayColor).addClass("past");
         } else if (elementID > currentTime) {
-            $(manipID).addClass("future");
+            $(dayColor).addClass("future");
         } else {
-            $(manipID).addClass("present");
+            $(dayColor).addClass("present");
         }
     }
 }
 
 // checkTime every 5 minutes
-setInterval(checkTime(), (1000 * 60) * 5);
+setInterval(checkTime(), 60);
