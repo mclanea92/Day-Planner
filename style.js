@@ -1,0 +1,1 @@
+var time = document.querySelector('#time-of-day');
