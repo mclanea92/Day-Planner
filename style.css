@@ -59,7 +59,7 @@ body {
   
   .saveBtn {
     border-left: 1px solid black;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 20px;
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
@@ -87,4 +87,8 @@ body {
     color: black;
     font-weight: bolder;
 
+  }
+
+  .container {
+    justify-content: center;
   }
