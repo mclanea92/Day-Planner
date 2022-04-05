@@ -81,3 +81,10 @@ body {
     color: #000000;
     border-top: 1px dashed #000000;
 }
+
+  #currentDay {
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+
+  }
