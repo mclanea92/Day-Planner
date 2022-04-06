@@ -1,6 +1,6 @@
 var time = document.querySelector('#time-of-day');
 var headerDate = moment().format('dddd, MMMM Do');
-
+var saveButton = document.querySelectorAll('.saveBtn')
 
 
 
@@ -43,3 +43,16 @@ var checkTime = function () {
 }
 // rechecks time
 setInterval(checkTime(), 60);
+
+// gets items to save to localstorage
+function saveText() {
+
+}
+
+
+function saveToLocal() {
+    var dataToSave = document.getElementById('input-form-').value;
+  localStorage.setItem('data', JSON.stringify(dataToSave));
+//   preventDefault();
+} 
+
