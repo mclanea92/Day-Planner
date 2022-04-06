@@ -51,7 +51,7 @@ let allBtns = document.querySelectorAll('.saveBtn')
 console.log('allBtns', allBtns.length)
 getData()
 
-for (var i=0; allBtns.length > i; ++i) {
+for (let i=0; allBtns.length > i; ++i) {
     allBtns[i].addEventListener('click', function(event) {
         var inputVal = allBtns[i].previousElementSibling.value;
         console.log('input value:', inputVal)
@@ -61,7 +61,7 @@ for (var i=0; allBtns.length > i; ++i) {
 }
 
 function getData() {
-    for (var i = 1; i < 10; ++i) {
+    for (let i = 1; i < 10; ++i) {
 
        var saveItem = localStorage.getItem('data-id-'+ i);
 
