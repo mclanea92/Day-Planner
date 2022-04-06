@@ -56,7 +56,7 @@ for (let i=0; allBtns.length > i; ++i) {
         let inputVal = allBtns[i].previousElementSibling.value;
         console.log('input value:', inputVal)
         let newNum = i + 1;
-        localStorage.setItem(`data-id-${newNum}`, inputVal)
+        localStorage.setItem(`data-id-` + i, inputVal)
     })
 }
 
