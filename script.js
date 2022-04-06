@@ -45,14 +45,13 @@ var checkTime = function () {
 setInterval(checkTime(), 60);
 
 // gets items to save to localstorage
-function saveText() {
-
+function saveButton() {
+    for(var i = 0; i < saveButton.length; i++) {
+        saveButton[i].addEventListener('click', function saveToLocal() {
+           var dataToSave = document.getElementById('input-form-[i]').value;
+           localStorage.setItem('data', JSON.stringify(dataToSave));
+            
+        })
+    }
 }
-
-
-function saveToLocal() {
-    var dataToSave = document.getElementById('input-form-').value;
-  localStorage.setItem('data', JSON.stringify(dataToSave));
-//   preventDefault();
-} 
 
