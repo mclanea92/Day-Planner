@@ -53,17 +53,17 @@ getData()
 
 for (let i=0; allBtns.length > i; ++i) {
     allBtns[i].addEventListener('click', function(event) {
-        var inputVal = allBtns[i].previousElementSibling.value;
+        let inputVal = allBtns[i].previousElementSibling.value;
         console.log('input value:', inputVal)
-        var newNum = i + 1;
-        localStorage.setItem(`data-id-` + i, inputVal)
+        let newNum = i + 1;
+        localStorage.setItem('data-id-' + i, inputVal)
     })
 }
 
 function getData() {
     for (let i = 1; i < 10; ++i) {
 
-       var saveItem = localStorage.getItem('data-id-'+ i);
+       let saveItem = localStorage.getItem('data-id-'+ i);
 
        if (saveItem !== null) {
         document.querySelector('input[data-id-' + i + ']').value = saveItem
