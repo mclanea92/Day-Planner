@@ -45,13 +45,30 @@ var checkTime = function () {
 setInterval(checkTime(), 60);
 
 // gets items to save to localstorage
-function saveButton() {
-    for(var i = 0; i < saveButton.length; i++) {
-        saveButton[i].addEventListener('click', function saveToLocal() {
-           var dataToSave = document.getElementById('input-form-[i]').value;
-           localStorage.setItem('data', JSON.stringify(dataToSave));
-            
-        })
-    }
+
+let allBtns = document.querySelectorAll('.saveBtn')
+
+console.log('allBtns', allBtns.length)
+getData()
+
+for (let i=0; allBtns.length > i; ++i) {
+    allBtns[i].addEventListener('click', function(event) {
+        let inputVal = allBtns[i].previousElementSibling.value;
+        console.log('input value:', inputVal)
+        let newNum = i + 1;
+        localStorage.setItem(`data-id-${newNum}`, inputVal)
+    })
 }
 
+function getData() {
+    for (let i = 1; i < 10; ++i) {
+
+       let saveItem = localStorage.getItem('data-id-'+ i);
+
+       if (saveItem !== null) {
+        document.querySelector('input[data-id-' + i + ']').value = saveItem
+       }
+
+       console.log('dataVal:', localStorage.getItem('data-id-'+ i))
+    }
+}
