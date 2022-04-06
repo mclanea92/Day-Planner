@@ -51,19 +51,19 @@ let allBtns = document.querySelectorAll('.saveBtn')
 console.log('allBtns', allBtns.length)
 getData()
 
-for (let i=0; allBtns.length > i; ++i) {
+for (var i=0; allBtns.length > i; ++i) {
     allBtns[i].addEventListener('click', function(event) {
-        let inputVal = allBtns[i].previousElementSibling.value;
+        var inputVal = allBtns[i].previousElementSibling.value;
         console.log('input value:', inputVal)
-        let newNum = i + 1;
+        var newNum = i + 1;
         localStorage.setItem(`data-id-` + i, inputVal)
     })
 }
 
 function getData() {
-    for (let i = 1; i < 10; ++i) {
+    for (var i = 1; i < 10; ++i) {
 
-       let saveItem = localStorage.getItem('data-id-'+ i);
+       var saveItem = localStorage.getItem('data-id-'+ i);
 
        if (saveItem !== null) {
         document.querySelector('input[data-id-' + i + ']').value = saveItem
