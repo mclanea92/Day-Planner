@@ -1,7 +1,7 @@
 var time = document.querySelector('#time-of-day');
 var headerDate = moment().format('dddd, MMMM Do');
 var saveButton = document.querySelectorAll('.saveBtn')
-
+var allBtns = document.querySelectorAll('.saveBtn')
 
 
 // Adds the day and date to the top of page
@@ -21,7 +21,7 @@ var checkTime = function () {
 
     //loop through timeColor classes
     for (var i = 0 ; i < timeBlockElements.length ; i++) {
-        // console.log(timeBlockElements)
+
         //Get element i's ID as a string
         var elementID = timeBlockElements[i].id;
 
@@ -44,11 +44,6 @@ var checkTime = function () {
 // rechecks time
 setInterval(checkTime(), 60);
 
-// gets items to save to localstorage
-
-let allBtns = document.querySelectorAll('.saveBtn')
-
-console.log('allBtns', allBtns.length)
 
 
 //When save button is hit, it adds it to local storage
@@ -57,12 +52,11 @@ for (let i = 0; i < allBtns.length; ++i) {
         var inputVal = allBtns[i].previousElementSibling.value; 
         console.log('input:', inputVal)
         var newNum = i + 1;
-        localStorage.setItem('data-id-' + (i+1) , inputVal)
+        localStorage.setItem('data-id-' + (newNum) , inputVal) //or i + 1 for newNum if it breaks
         console.log(allBtns)
     })
 }
 // When refreshing the page, this function pulls the localstorage and displays back onto the screen
-
 getData()
 
 function getData() {
