@@ -50,11 +50,11 @@ let allBtns = document.querySelectorAll('.saveBtn')
 
 console.log('allBtns', allBtns.length)
 getData()
-
+//When save button is hit, it adds it to local storage
 for (var i = 1; allBtns.length > i; ++i) {
     allBtns[i].addEventListener('click', function(event) {
         var inputVal = allBtns[i].previousElementSibling.value; //issue here for some reason
-        console.log('input value:', inputVal)
+        console.log('input:', inputVal)
         var newNum = i + 1;
         localStorage.setItem('data-id-' + i, inputVal)
     })
