@@ -49,7 +49,7 @@ setInterval(checkTime(), 60);
 let allBtns = document.querySelectorAll('.saveBtn')
 
 console.log('allBtns', allBtns.length)
-getData()
+
 
 //When save button is hit, it adds it to local storage
 for (let i = 0; i < allBtns.length; ++i) {
@@ -61,6 +61,9 @@ for (let i = 0; i < allBtns.length; ++i) {
         console.log(allBtns)
     })
 }
+// When refreshing the page, this function pulls the localstorage and displays back onto the screen
+
+getData()
 
 function getData() {
     for (var i = 0; i < 10; ++i) {
