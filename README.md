@@ -33,9 +33,9 @@ https://mclanea92.github.io/Day-Planner/
 
 The screenshot below shows that the day and date are displayed at the top of the page
 
-![day and date at top of page](top%20of%20page.png)
+![day and date at top of page](./topofpage.png)
 
 
-The screenshot below shows that when save button hit, it saves to localstorage and corresponds to the correct time of day.
+The screenshot below shows that when save button hit, it saves to localstorage and corresponds to the correct time of day.  When the page is refreshed, it will reload into the same time slot.
 
-![screenshot of localstorage](localstorage.png)
+![screenshot of localstorage](localStorage.png)
