@@ -64,6 +64,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
+    min-height: 100%;
   }
   
   .saveBtn i:hover {
@@ -93,5 +94,9 @@ body {
   .container {
     justify-content: center;
     color: black;
+  }
+
+  .hour input {
+    min-height: 100%;
   }
 
