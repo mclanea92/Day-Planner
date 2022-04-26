@@ -1,5 +1,20 @@
 # Day-Planner
 
+
+## Live link to deployed app
+https://mclanea92.github.io/Day-Planner/
+
+
+## List of technologies used
+-Javascript
+-JQuery
+-Bootstrap
+
+
+## About Application:
+This application, you are able to save things to do during the day to local storage based on the time of day you desire.  The time of day determines what color that the ties for each hour are.  The Gray color is for past hours, Red is for the current hour and Green is for the hours that are still coming up in the day.
+
+
 ## User Story
 
 My task for this homework is to create a day planner that is interactive and saves the data so it stays if you refresh.  The color of the times change based on the time of day.
